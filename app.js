@@ -4,6 +4,7 @@ const router = express.Router()
 const bodyParser = require('body-parser')
 const app = express()
 const dbConnStr = "mongodb+srv://JesusDaw:AZUrMFsLrKXvyGmB@cluster0-wdudn.mongodb.net/test?retryWrites=true&w=majority"
+const routePrefix = "api/v1";
 
 app.use(bodyParser.json())
 
@@ -21,3 +22,6 @@ mongoose.connect(dbConnStr, { useNewUrlParser: true, useFindAndModify: false})
 app.listen(8080, function(){
     console.log('Servidor activo en http://localhost:8080')
 })
+
+app.use(`${routePrefix}/article`, articles);
+app.use(`${routePrefix}/article`, comments);
