@@ -15,7 +15,7 @@ router.route('/')
     })
     .post(function (req, res) {
         let userData = req.body
-        let userObj = new Comment({
+        let userObj = new User({
             name: userData.name,
             email: userData.email,
             password: sha512(userData.password),

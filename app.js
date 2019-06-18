@@ -6,7 +6,7 @@ const commentsRouter = require('./routes/comments')
 const articlesRouter = require('./routes/articles')
 const usersRouter = require('./routes/users')
 const app = express()
-const dbConnStr = "mongodb+srv://JesusDaw:AZUrMFsLrKXvyGmB@cluster0-wdudn.mongodb.net/test?retryWrites=true&w=majority"
+const dbConnStr = "mongodb+srv://JesusDaw:AZUrMFsLrKXvyGmB@cluster0-wdudn.mongodb.net/practica-final?retryWrites=true&w=majority"
 const routePrefix = "/api/v1";
 
 app.use(bodyParser.json())
