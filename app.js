@@ -1,15 +1,18 @@
 const express = require('express')
 const mongoose = require('mongoose')
-const router = express.Router()
+const cors = require('cors')
 const bodyParser = require('body-parser')
 const commentsRouter = require('./routes/comments')
 const articlesRouter = require('./routes/articles')
 const usersRouter = require('./routes/users')
+
+const router = express.Router()
 const app = express()
 const dbConnStr = "mongodb+srv://JesusDaw:AZUrMFsLrKXvyGmB@cluster0-wdudn.mongodb.net/practica-final?retryWrites=true&w=majority"
 const routePrefix = "/api/v1";
 
 app.use(bodyParser.json())
+app.use(cors())
 
 let db = mongoose.connection;
 
