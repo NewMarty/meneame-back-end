@@ -26,6 +26,6 @@ app.use(`${routePrefix}/article`, articlesRouter);
 app.use(routePrefix+'/users', usersRouter)
 app.use(`${routePrefix}/article`, commentsRouter);
 
-app.listen(8080, function(){
+app.listen(proccess.env.PORT || 8080, function(){
     console.log('Servidor activo en http://localhost:8080')
 })
