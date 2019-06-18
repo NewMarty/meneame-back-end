@@ -2,9 +2,9 @@
   "name": "meneame-backend",
   "version": "1.0.0",
   "description": "Parte backend de proyecto copia Meneame",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon --watch . --watch ./views --watch ./routes -e js,html server.js"
   },
   "author": "",
   "license": "ISC",
