@@ -18,9 +18,7 @@ router.route('/')
             user: articleData.user,
             title: articleData.title,
             url: articleData.url,
-            description: articleData.description,
-            comment: articleData.comment,
-            vote: articleData.vote
+            description: articleData.description
         })
 
         articleObj.save(function (err){
@@ -72,8 +70,6 @@ router.route('/')
                     result.title = articleData.title
                     result.url = articleData.url
                     result.description = articleData.description
-                    result.comment = articleData.comment
-                    result.vote = articleData.vote
 
                     result.save(function (err) {
                         if (err) {
