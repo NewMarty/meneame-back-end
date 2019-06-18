@@ -1,13 +1,15 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
-let CommentModel = mongoose.model('Comment', commentSchema)
 
 let commentSchema = new Schema ({
   message: {type: String, required: true},
-  userId: {type: String, required: true},
-  articleId: {type: String, required: true} }, {
+  userId: {type: Schema.ObjectId, ref: 'User'},
+  articleId: {type: Schema.ObjectId, ref: 'Article'} 
+  }, {
     timestamps: {createdAt: 'created_at'}
   }
 )
+
+let CommentModel = mongoose.model('Comment', commentSchema)
 
 module.exports = CommentModel

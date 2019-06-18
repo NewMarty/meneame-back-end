@@ -2,6 +2,9 @@ const express = require('express')
 const mongoose = require('mongoose')
 const router = express.Router()
 const bodyParser = require('body-parser')
+const comments = require('./routes/comments')
+const articles = require('./routes/articles')
+const usersRouter = require('./routes/users')
 const app = express()
 const dbConnStr = "mongodb+srv://JesusDaw:AZUrMFsLrKXvyGmB@cluster0-wdudn.mongodb.net/test?retryWrites=true&w=majority"
 const routePrefix = "api/v1";
@@ -24,4 +27,5 @@ app.listen(8080, function(){
 })
 
 app.use(`${routePrefix}/article`, articles);
-app.use(`${routePrefix}/article`, comments);
+app.use(routePrefix+'/users', usersRouter)
+// app.use(`${routePrefix}/article`, comments);

@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const sha512 = require('sha512')
+const sha512 = require('js-sha512')
 let User = require('../models/users')
 
 router.route('/')
