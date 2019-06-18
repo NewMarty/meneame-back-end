@@ -4,7 +4,8 @@
   "description": "Parte backend de proyecto copia Meneame",
   "main": "app.js",
   "scripts": {
-    "dev": "nodemon --watch . --watch ./views --watch ./routes -e js,html server.js"
+    "dev": "nodemon --watch . --watch ./views --watch ./routes -e js,html server.js",
+    "start": "node app.js"
   },
   "author": "",
   "license": "ISC",
